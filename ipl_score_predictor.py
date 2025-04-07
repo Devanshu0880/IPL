@@ -8,8 +8,8 @@ import streamlit as st
 #SET PAGE WIDE
 st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 
-with open('ml_model.pkl', 'wb') as f:
-    pickle.dump(model, f)
+with open('ml_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 #Get the ML model 
 
